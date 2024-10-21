@@ -4,82 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Compte à Rebours - 7 janvier 2025</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        body {
-            background: linear-gradient(to right, #4facfe, #00f2fe);
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Arial', sans-serif;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .countdown-container {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-            width: 100%;
-            max-width: 800px;
-        }
-
-        .countdown-title {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-
-        .countdown {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-
-        .countdown-item {
-            font-size: 2.5rem;
-            margin: 10px;
-        }
-
-        .countdown-item span {
-            display: block;
-            font-size: 1.2rem;
-            margin-top: 10px;
-            color: #fffcfc;
-        }
-
-        @media (max-width: 768px) {
-            .countdown-title {
-                font-size: 1.5rem;
-            }
-
-            .countdown-item {
-                font-size: 2rem;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .countdown-title {
-                font-size: 1.2rem;
-            }
-
-            .countdown-item {
-                font-size: 1.5rem;
-            }
-
-            .countdown-item span {
-                font-size: 1rem;
-            }
-        }
-    </style>
+    <title>Compte à Rebours et Météo Aléatoire</title>
+    <link href="styles.css" rel="stylesheet">
 </head>
 
 <body>
+
+    <div class="weather-container">
+        <h2 id="weather-city">Météo à <a href="#" id="city-link" target="_blank"></a></h2>
+        <p id="weather-info"></p>
+    </div>
 
     <div class="countdown-container">
         <h1 class="countdown-title">Compte à rebours jusqu'à la fin de l'EPF (7 janvier 2025 à 17h15)</h1>
@@ -99,37 +33,7 @@
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <script>
-        function countdown() {
-            const countDate = new Date('January 7, 2025 17:15:00').getTime();
-            const now = new Date().getTime();
-            const gap = countDate - now;
-
-            const second = 1000;
-            const minute = second * 60;
-            const hour = minute * 60;
-            const day = hour * 24;
-
-            const days = Math.floor(gap / day);
-            const hours = Math.floor((gap % day) / hour);
-            const minutes = Math.floor((gap % hour) / minute);
-            const seconds = Math.floor((gap % minute) / second);
-
-            document.getElementById('days').innerText = days;
-            document.getElementById('hours').innerText = hours;
-            document.getElementById('minutes').innerText = minutes;
-            document.getElementById('seconds').innerText = seconds;
-
-            setTimeout(countdown, 1000);
-        }
-
-        countdown();
-    </script>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
