@@ -18,6 +18,7 @@
             font-family: 'Arial', sans-serif;
             color: white;
             text-align: center;
+            padding: 20px;
         }
 
         .countdown-container {
@@ -25,21 +26,24 @@
             border-radius: 20px;
             padding: 40px;
             box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 800px;
         }
 
         .countdown-title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin-bottom: 20px;
         }
 
         .countdown {
             display: flex;
             justify-content: space-around;
+            flex-wrap: wrap;
         }
 
         .countdown-item {
-            font-size: 3rem;
-            margin: 0 20px;
+            font-size: 2.5rem;
+            margin: 10px;
         }
 
         .countdown-item span {
@@ -48,13 +52,37 @@
             margin-top: 10px;
             color: #fffcfc;
         }
+
+        @media (max-width: 768px) {
+            .countdown-title {
+                font-size: 1.5rem;
+            }
+
+            .countdown-item {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .countdown-title {
+                font-size: 1.2rem;
+            }
+
+            .countdown-item {
+                font-size: 1.5rem;
+            }
+
+            .countdown-item span {
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 
 <body>
 
     <div class="countdown-container">
-        <h1 class="countdown-title">Compte à rebours jusqu'a la fin de l'EPF (7 janvier 2025 à 17h15)</h1>
+        <h1 class="countdown-title">Compte à rebours jusqu'à la fin de l'EPF (7 janvier 2025 à 17h15)</h1>
         <div id="countdown" class="countdown">
             <div class="countdown-item">
                 <span id="days"></span> Jours
