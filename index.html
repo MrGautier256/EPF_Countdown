@@ -5,34 +5,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compte à Rebours et Météo Aléatoire</title>
-    <link href="styles.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
 
-    <div class="weather-container">
-        <h2 id="weather-city">Météo à <a href="#" id="city-link" target="_blank"></a></h2>
-        <p id="weather-info"></p>
-    </div>
+    <div class="container">
+        <!-- Section Météo -->
+        <div class="weather-container text-center rounded shadow-sm">
+            <h2 id="weather-city" class="mb-3">Météo à <a href="#" id="city-link" target="_blank"
+                    class="text-decoration-none text-dark"></a></h2>
+            <p id="weather-info" class="lead"></p>
+        </div>
 
-    <div class="countdown-container">
-        <h1 class="countdown-title">Compte à rebours jusqu'à la fin de l'EPF (7 janvier 2025 à 17h15)</h1>
-        <div id="countdown" class="countdown">
-            <div class="countdown-item">
-                <span id="days"></span> Jours
-            </div>
-            <div class="countdown-item">
-                <span id="hours"></span> Heures
-            </div>
-            <div class="countdown-item">
-                <span id="minutes"></span> Minutes
-            </div>
-            <div class="countdown-item">
-                <span id="seconds"></span> Secondes
+        <!-- Section Compte à Rebours -->
+        <div class="countdown-container text-center rounded shadow-sm">
+            <h1 class="countdown-title h3 mb-4">Compte à rebours jusqu'à la fin de l'EPF (7 janvier 2025 à 17h15)</h1>
+            <div id="countdown" class="row row-cols-2 row-cols-md-4 g-3">
+                <div class="countdown-item col">
+                    <div class="p-3 rounded bg-days">
+                        <span id="days" class="h2 d-block"></span>
+                        <small>Jours</small>
+                    </div>
+                </div>
+                <div class="countdown-item col">
+                    <div class="p-3 rounded bg-hours">
+                        <span id="hours" class="h2 d-block"></span>
+                        <small>Heures</small>
+                    </div>
+                </div>
+                <div class="countdown-item col">
+                    <div class="p-3 rounded bg-minutes">
+                        <span id="minutes" class="h2 d-block"></span>
+                        <small>Minutes</small>
+                    </div>
+                </div>
+                <div class="countdown-item col">
+                    <div class="p-3 rounded bg-seconds">
+                        <span id="seconds" class="h2 d-block"></span>
+                        <small>Secondes</small>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 
