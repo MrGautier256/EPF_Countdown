@@ -2,43 +2,21 @@
 body {
   background: linear-gradient(135deg, #d0e7f9, #a1c4fd);
   font-family: Arial, sans-serif;
-  height: 100vh; /* Fixer la hauteur totale */
-  overflow: hidden; /* Empêche le défilement */
+  height: 100vh;
+  overflow: hidden;
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Aligner les éléments en haut */
+  align-items: flex-start;
   margin: 0;
-  padding-top: 2rem; /* Ajouter un espacement en haut */
-  transform: scale(1.2); /* Zoom global */
-  transform-origin: top center; /* Point d'origine pour le zoom */
+  padding-top: 2rem;
+  transform: scale(1.2);
+  transform-origin: top center;
 }
 
 /* Styles personnalisés des sections avec bordures dégradées */
 .container {
   max-width: 800px;
-}
-
-.weather-container {
-  background: linear-gradient(135deg, #ffb88c, #ff6f61);
-  color: #333;
-  padding: 2rem;
-  border-radius: 12px;
-  border: 5px solid transparent;
-  background-clip: padding-box;
-  position: relative;
-  margin-bottom: 1.5rem;
-}
-
-.weather-container::before {
-  content: "";
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
-  z-index: -1;
-  background: linear-gradient(135deg, #ffb88c, #ff6f61);
-  border-radius: 15px;
+  margin-top: 5rem;
 }
 
 .countdown-container {
@@ -82,16 +60,4 @@ body {
 .countdown-item.bg-seconds {
   background: #f1c40f;
   color: #333;
-}
-
-#city-link {
-  color: #003d80 !important; 
-  text-decoration: underline; 
-  font-weight: bold; 
-  cursor: pointer;
-}
-
-#city-link:hover {
-  color: #0056b3 !important; 
-  text-decoration: none; 
 }
