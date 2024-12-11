@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Fonction pour le compte à rebours
   function countdown() {
-    const countDate = new Date("January 7, 2025 17:15:00").getTime();
+    const countDate = new Date("December 19, 2024 17:15:00").getTime();
     const now = new Date().getTime();
     const gap = countDate - now;
 
